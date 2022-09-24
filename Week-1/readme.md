@@ -36,7 +36,7 @@ command -options argument
         $ ls
         ```
     - ls -a (showing all files include hidden files)
-    - man /<nama_command/>
+    - man <nama_command>
     
         untuk melihat penjelasan dan penggunaan dari suatu command 
         ```
