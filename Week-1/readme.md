@@ -9,15 +9,24 @@
 
 ## Unix Command Line
 `pengenalan Unix Command Line`
+### Command Line Interface (CLI)
+CLI adalah program yang memungkinkan pengguna mengetik perintah teks yang memerintahkan komputer untuk melakukan tugas tertentu
 ### Shell 
 - **Shell** adalah Program untuk berkomunikasi dengan sistem operasi
 - Shell yang berbasis teks disebut Command Line Interface
+### CLI terminal
+- Terminal Emulator, aplikasi untuk mengakses CLI
 - contoh CLI
     - Bash
     - PowerShell
     - sh
     - cmd.exe
 - Shell Prompt adalah Tempat kita memasukkan command
+### file system
+Sebuah filesystem mengatur bagaimana data disimpan di dalam sebuah system
+
+> contoh file system structure
+> ![Illustration to use for new users](img/file-system.jpg)
 
 `command command Unix`
 - Struktur Penulisan Command
@@ -35,17 +44,17 @@ $ command -options argument
         ```
         $ mkdir <nama_dir>
         ```
-    - cd<br>
+    - #### cd<br>
         ```
         $ cd ../directory
         ```
         > catatan : .. untuk naik 1 directory
-    - pwd<br>
+    - #### pwd<br>
         melihat lokasi directory saat ini
         ```
         $ pwd
         ```
-    - ls<br>
+    - #### ls<br>
         menampilkan semua file
         ```
         $ ls
@@ -54,17 +63,17 @@ $ command -options argument
         ```
         $ ls -a
         ```
-    - man<br>
+    - #### man<br>
         untuk melihat penjelasan dan penggunaan dari suatu command 
         ```
         $ man <nama_command>
         ```
-    - touch<br>
+    - #### touch<br>
         untuk membuat file
         ```
         $ touch <nama_file>
         ```
-    - cp<br>
+    - #### cp<br>
         untuk mengcopy file dalam directory yang sama
         ```
         $ cp <nama_file> <new_nama_file>
@@ -77,22 +86,33 @@ $ command -options argument
         ```
         $ cp -r/R Src_directory Dest_directory
         ```
-    - mv<br>
+    - #### mv<br>
         rename file
         ```
-        $ Mv <nama_file> <nama_file_baru>
+        $ mv <nama_file> <nama_file_baru>
         ```
         memindahkan file
         ```
-        $ Mv <nama file> <directory>
+        $ mv <nama file> <directory>
         ```
-
-    - Rm
+    - #### rm<br>
         Remove file
         ```
-        $ Rm <file>
+        $ rm <file>
         ```
         remove directory
         ```
-        $ Rm -r <directory>
+        $ rm -r <directory>
+        ```
+    - #### echo
+        Cetak sesuatu
+        ```
+        $ print -option "<something>"
+        ```
+    - #### cat
+        
+    - #### nano
+        untuk membuka editor teks untuk file
+        ```
+        nano <file_name>
         ```
