@@ -28,11 +28,23 @@ command -options argument
     - clear / ctrl + l <br> untuk membersihkan terminal
     - ls (list directory content)
     - ls -a (showing all files include hidden files)
-    - man nama_command => untuk melihat penjelasan dan penggunaan dari suatu command 
+    - man /<nama_command/>
+    
+        untuk melihat penjelasan dan penggunaan dari suatu command 
+        ```
+        $ man touch
+        ```
     - Touch <nama file> untuk membuat file
+        ```
+        $ touch coba.txt
+        ```
     - Cp
-        - cp <file> <dir> untuk mengcopy file
+        
+        untuk mengcopy file kedalam folder
+        ```
+        $ cp coba.txt /folder 
+        ```
         - cp -r <dir>
-        - cp <nama file> <new nama file> => mengubah nama file
+        - cp <nama file> <new nama file> => mengubah nama
     - Mv
     - Rm
