@@ -1,6 +1,5 @@
 # <p style="text-align: center;">```Writing and Presentation Test Week 1 ```</p>
 
-
 ---
 
 # Stage 0 Intro To Coding
