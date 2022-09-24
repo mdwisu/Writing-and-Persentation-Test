@@ -25,16 +25,26 @@
 $ command -options argument
 ```
 - Command-command CLI
-    - clear / ctrl + l<br>
+    - #### clear / ctrl + l<br>
         untuk membersihkan terminal
         ```
         $ clear
+        ```
+    - #### mkdir<br>
+        membuat directory baru
+        ```
+        $ mkdir <nama_dir>
         ```
     - cd<br>
         ```
         $ cd ../directory
         ```
         > catatan : .. untuk naik 1 directory
+    - pwd<br>
+        melihat lokasi directory saat ini
+        ```
+        $ pwd
+        ```
     - ls<br>
         menampilkan semua file
         ```
