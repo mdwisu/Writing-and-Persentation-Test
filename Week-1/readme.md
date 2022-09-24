@@ -25,8 +25,16 @@
 command -options argument
 ```
 - Command-command CLI
-    - clear / ctrl + l <br> untuk membersihkan terminal
-    - ls (list directory content)
+    - clear / ctrl + l <br>
+        untuk membersihkan terminal
+        ```
+        $ clear
+        ```
+    - ls <br>
+        melihat list Content
+        ```
+        $ ls
+        ```
     - ls -a (showing all files include hidden files)
     - man /<nama_command/>
     
