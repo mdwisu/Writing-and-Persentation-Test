@@ -10,14 +10,14 @@
 
 ## <span style="color:orange">Unix Command Line</span>
 `pengenalan Unix Command Line`
-- Shell => Program untuk berkomunikasi dengan sistem operasi
+- Shell adalah Program untuk berkomunikasi dengan sistem operasi
 - Shell yang berbasis teks disebut Command Line Interface
 - contoh CLI
     - Bash
     - PowerShell
     - sh
     - cmd.exe
-- Shell Prompt => Tempat kita memasukkan command
+- Shell Prompt adalah Tempat kita memasukkan command
 
 `command command Unix`
 - Struktur Penulisan Command
