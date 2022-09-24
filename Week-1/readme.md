@@ -8,7 +8,7 @@
 # Stage 1 Web Development Pemula
 
 ## Unix Command Line
-`pengenalan Unix Command Line`
+## `pengenalan Unix Command Line`
 ### Command Line Interface (CLI)
 CLI adalah program yang memungkinkan pengguna mengetik perintah teks yang memerintahkan komputer untuk melakukan tugas tertentu
 ### Shell 
@@ -28,7 +28,7 @@ Sebuah filesystem mengatur bagaimana data disimpan di dalam sebuah system
 > contoh file system structure
 > ![Illustration to use for new users](img/file-system.jpg)
 
-`command command Unix`
+## `command command Unix`
 - Struktur Penulisan Command
 ```
 $ command -options argument
@@ -39,16 +39,17 @@ $ command -options argument
         ```
         $ clear
         ```
-    - #### mkdir<br>
-        membuat directory baru
+    - #### man<br>
+        untuk melihat penjelasan dan penggunaan dari suatu command 
         ```
-        $ mkdir <nama_dir>
+        $ man <nama_command>
         ```
-    - #### cd<br>
+     - #### echo
+        Cetak sesuatu
         ```
-        $ cd ../directory
+        $ print -option "<something>"
         ```
-        > catatan : .. untuk naik 1 directory
+    ### ``Navigasi menggunakan CLI``
     - #### pwd<br>
         melihat lokasi directory saat ini
         ```
@@ -63,16 +64,41 @@ $ command -options argument
         ```
         $ ls -a
         ```
-    - #### man<br>
-        untuk melihat penjelasan dan penggunaan dari suatu command 
+    - #### cd<br>
         ```
-        $ man <nama_command>
+        $ cd ../directory
         ```
-    - #### touch<br>
+        > catatan : .. untuk naik 1 directory
+    ### ``Membuat file dan directory``
+     - #### touch<br>
         untuk membuat file
         ```
         $ touch <nama_file>
         ```
+    - #### mkdir<br>
+        membuat directory baru
+        ```
+        $ mkdir <nama_dir>
+        ```
+    ### ``Melihat isi file``
+    - #### head<br>
+        menampilkan beberapa baris awal sebuah file text
+        ```
+        $ head -n <namafile>
+        ```
+        > -n/-angka untuk banyaknya baris yang ingin ditampilkan
+    - #### tail<br>
+        menampilkan beberapa baris akhir sebuah file text
+        ```
+        $ tail -n <namafile>
+        ```
+        > -n/-angka untuk banyaknya baris yang ingin ditampilkan
+    - #### cat
+        melihat seluruh isi sebuah file text
+        ```
+        $ cat <nama_file>
+        ```
+    ### ``Menyalin, memindahkan, menghapus, mengedit, dan files & directory``
     - #### cp<br>
         untuk mengcopy file dalam directory yang sama
         ```
@@ -104,15 +130,8 @@ $ command -options argument
         ```
         $ rm -r <directory>
         ```
-    - #### echo
-        Cetak sesuatu
-        ```
-        $ print -option "<something>"
-        ```
-    - #### cat
-        
     - #### nano
-        untuk membuka editor teks untuk file
+        untuk membuka editor teks untuk file untuk diedit
         ```
         nano <file_name>
         ```
