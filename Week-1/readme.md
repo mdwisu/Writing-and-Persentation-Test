@@ -47,7 +47,7 @@ $ man <nama_command>
 - #### echo
 Cetak sesuatu
 ```
-$ print -option "<something>"
+$ echo -option "<something>"
 ```
 ### ``Navigasi menggunakan CLI``
 - #### pwd<br>
@@ -68,7 +68,7 @@ $ ls -a
 ```
 $ cd ../directory
 ```
-> catatan : .. untuk naik 1 directory
+> catatan : ( cd .. ) untuk naik 1 directory
 ### ``Membuat file dan directory``
 - #### touch<br>
 untuk membuat file
@@ -137,8 +137,22 @@ nano <file_name>
 ```
 ---
 
-## 2. Git and Github
+## 2. Git dan Github
+## `Pengenalan Git`
 Git adalah aplikasi yang dapat melacak setiap perubahan yang terjadi pada suatu folder atau file.
+## `Instalasi Git`
+Download dan install GIT seperti halnya instal aplikasi pada umumnya
+[disini](https://git-scm.com "https://git-scm.com/")
+### Setup Awal
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+> WARNING: email yang disetup HARUS SAMA dengan yang digunakan pada GITHUB
+### cek setup apakah berhasil
+```
+$ git config --list
+```
 
 
 
