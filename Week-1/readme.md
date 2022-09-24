@@ -5,11 +5,12 @@
 # Stage 0 Intro To Coding
 
     
-# <span style="color:green">Stage 1 Web Development Pemula</span>
+# Stage 1 Web Development Pemula
 
-## <span style="color:orange">Unix Command Line</span>
+## Unix Command Line
 `pengenalan Unix Command Line`
-- Shell adalah Program untuk berkomunikasi dengan sistem operasi
+- ### Shell 
+    **Shell** adalah Program untuk berkomunikasi dengan sistem operasi
 - Shell yang berbasis teks disebut Command Line Interface
 - contoh CLI
     - Bash
