@@ -22,37 +22,67 @@
 `command command Unix`
 - Struktur Penulisan Command
 ```
-command -options argument
+$ command -options argument
 ```
 - Command-command CLI
-    - clear / ctrl + l <br>
+    - clear / ctrl + l<br>
         untuk membersihkan terminal
         ```
         $ clear
         ```
-    - ls <br>
-        melihat list Content
+    - cd<br>
+        ```
+        $ cd ../directory
+        ```
+        > catatan : .. untuk naik 1 directory
+    - ls<br>
+        menampilkan semua file
         ```
         $ ls
         ```
-    - ls -a (showing all files include hidden files)
-    - man <nama_command>
-    
+        menampilkan semua file beserta hidden file
+        ```
+        $ ls -a
+        ```
+    - man<br>
         untuk melihat penjelasan dan penggunaan dari suatu command 
         ```
-        $ man touch
+        $ man <nama_command>
         ```
-    - Touch <nama file> untuk membuat file
+    - touch<br>
+        untuk membuat file
         ```
-        $ touch coba.txt
+        $ touch <nama_file>
         ```
-    - Cp
-        
-        untuk mengcopy file kedalam folder
+    - cp<br>
+        untuk mengcopy file dalam directory yang sama
         ```
-        $ cp coba.txt /folder 
+        $ cp <nama_file> <new_nama_file>
         ```
-        - cp -r <dir>
-        - cp <nama file> <new nama file> => mengubah nama
-    - Mv
+        copy ke dir spesifik
+        ```
+        $ cp <nama_file1> <nama_file2> <destination_dir>
+        ```
+        copy directory beserta isinya secara rekursif ke dalam directory yang dituju
+        ```
+        $ cp -r/R Src_directory Dest_directory
+        ```
+    - mv<br>
+        rename file
+        ```
+        $ Mv <nama_file> <nama_file_baru>
+        ```
+        memindahkan file
+        ```
+        $ Mv <nama file> <directory>
+        ```
+
     - Rm
+        Remove file
+        ```
+        $ Rm <file>
+        ```
+        remove directory
+        ```
+        $ Rm -r <directory>
+        ```
