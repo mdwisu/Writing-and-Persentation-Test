@@ -235,6 +235,15 @@ $ git checkout HEAD~3 index.html
 - #### git reset<br>
 membatalkan perubahan suatu file saat dalam staged
 ```
+$ git revert <nama_file>
+```
+- #### git reset<br>
+membatalkan perubahan suatu file saat dalam staged
+```
+$ git reset <nama_file>
+```
+
+```
 $ git reset <nama_file>
 ```
 
