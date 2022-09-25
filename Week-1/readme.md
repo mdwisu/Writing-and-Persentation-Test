@@ -202,13 +202,15 @@ melihat lebih sederhana
 ```
 $ git log --oneline
 ```
+berdasarkan nomor version
 ```
 $ git log <nomor_version>
 ```
-
+berdasarkan nama file
 ```
-$ git log <name_file>
+$ git log <nama_file>
 ```
+berdasarkan author
 ```
 $ git log --author='<name_author>'
 ```
