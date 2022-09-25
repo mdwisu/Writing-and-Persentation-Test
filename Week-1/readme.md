@@ -221,6 +221,18 @@ membatalkan perubahan suatu file sebelum staged atau commited
 ```
 $ git checkout <nama_file>
 ```
+kembali ke commit terentu dengan nomor commit 
+```
+$ git checkout <no_commit> <optional_name_file_if_spesific>
+```
+> gunakan git log untuk melihat nomor commit
+
+mengembalikan commit jauh ke bawah. Misal kita ingin kembali pada 3 commit sebelumnya
+```
+$ git checkout HEAD~3 index.html
+```
+
+- #### git reset<br>
 membatalkan perubahan suatu file saat dalam staged
 ```
 $ git reset <nama_file>
