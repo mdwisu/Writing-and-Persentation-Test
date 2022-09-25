@@ -215,4 +215,16 @@ berdasarkan author
 $ git log --author='<name_author>'
 ```
 
+> Jika perubahan yang sedang dilakukan terjadi kesalahan dan kita ingin mengembalikan keadaan seperti sebelumnya maka itu bisa dilakukan :) caranya dibawah inii
+- #### git checkout<br>
+membatalkan perubahan suatu file sebelum staged atau commited
+```
+$ git checkout <nama_file>
+```
+membatalkan perubahan suatu file saat dalam staged
+```
+$ git reset <nama_file>
+```
+
+
 
