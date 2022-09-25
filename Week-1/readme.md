@@ -154,5 +154,21 @@ $ git config --global user.email johndoe@example.com
 $ git config --list
 ```
 
+## `Repository Git`
+Repository adalah direktori proyek yang kita buat
+- #### git init<br>
+
+```
+$ git init <nama_folder_repository>
+```
+atau gunakan 
+```
+$ git init .
+```
+jika anda sudah berada dalam folder yang diinginkan atau sudah anda dibuat
+- #### git status<br>
+
+
+
 
 
