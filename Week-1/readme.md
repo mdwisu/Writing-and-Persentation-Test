@@ -156,7 +156,7 @@ $ git config --list
 
 ## `Repository Git`
 Repository adalah direktori proyek yang kita buat
-- #### git init<br>
+- #### git init<br>adsf
 
 ```
 $ git init <nama_folder_repository>
@@ -167,8 +167,50 @@ $ git init .
 ```
 jika anda sudah berada dalam folder yang diinginkan atau sudah anda dibuat
 - #### git status<br>
+```
+$ git status
+```
+maka akan muncul seperti gambar di bawah
+![Illustration to use for new users](img/git-status.jpg)
 
+kondisi pada status
+- untracked
+- unmodified
+- modified -> kondisi dimana revisi atau perubahan sudah dilakukan, tetapi belum ditandai (untracked) dan belum disimpan dalam version control
+- staged -> kondisi dimana revisi sudah ditandai (modified) namun belum disimpan di version control
+- commited -> dimana revisi sudah disimpan pada version control
+- #### git add<br>
+menambahkan file spesifik yang diedit ke staging area
+```
+$ git add <nama_file>
+```
+menambahkan semua file yang diedit ke staging area
+```
+$ git add .
+```
+- #### git commit<br>
+save perubahan di staging area pada version control
+```
+$ git commit -m "<comment>"
+```
+- #### git log<br>
+melihat catatan log dari revisi-revisi
+```
+$ git log
+```
+melihat lebih sederhana
+```
+$ git log --oneline
+```
+```
+$ git log <nomor_version>
+```
 
-
+```
+$ git log <name_file>
+```
+```
+$ git log --author='<name_author>'
+```
 
 
