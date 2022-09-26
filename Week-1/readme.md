@@ -270,6 +270,67 @@ to merge a branch
 git merge <name_branch>
 ```
 > note: recommend to be on branch main
+## `Github Publish and clone`
+- #### github publish<br>
+- buka akun github di browser
+- klik new seperti di gambar
+![Illustration to use for new users](img/github.jpg)
+- isikan settingan yang diinginkan
+- klik create repository seperti digambar
+![Illustration to use for new users](img/github2.jpg)
+- setelah itu akan muncul quick setup dari github seperti digambar
+![Illustration to use for new users](img/github3.jpg)
+- ketikan script untuk menambahkan remote untuk terhubung ke github pada terminal bash atau yang lain
+```
+$ git remote add origin https://github.com/mdwisu/test.git
+```
+- pindah ke branch main
+```
+$ git branch -M main
+```
+- setelah di edit, dapat melakukan push ke github
+```
+$ git push -u origin main
+```
+- #### github clone<br>
+- untuk melakukan clone, dapat mengakses github oranglain yang ingin di clone
+- klik code seperti di gambar
+- lalu copy url HTTPS
+![Illustration to use for new users](img/github_clone.jpg)
+- buka git bash lalu ketikan script berikut
+```
+git clone <url HTTPS>
+```
+- dan repository telah berhasil di clone
+
+
+
+---
+---
+
+## 3. HTML
+## `Pengenalan HTML`
+- HTML adalah singkatan dari Hypertext Markup Language.
+- HTML digunakan untuk menampilkan konten pada browser. 
+- Ada 2 tools utama yang harus dipersiapkan untuk membuat HTML
+    - Browser
+    - Code Editor
+## `HTML Structure`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+
 
 
 
