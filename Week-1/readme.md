@@ -136,6 +136,7 @@ untuk membuka editor teks untuk file untuk diedit
 nano <file_name>
 ```
 ---
+---
 
 ## 2. Git dan Github
 ## `Pengenalan Git`
@@ -217,7 +218,7 @@ $ git log --author='<name_author>'
 
 > Jika perubahan yang sedang dilakukan terjadi kesalahan dan kita ingin mengembalikan keadaan seperti sebelumnya maka itu bisa dilakukan :) caranya dibawah inii
 - #### git checkout<br>
-membatalkan perubahan suatu file sebelum staged atau commited
+mengambil file atau membatalkan perubahan suatu file sebelum staged atau commited
 ```
 $ git checkout <nama_file>
 ```
@@ -231,21 +232,44 @@ mengembalikan commit jauh ke bawah. Misal kita ingin kembali pada 3 commit sebel
 ```
 $ git checkout HEAD~3 index.html
 ```
-
-- #### git reset<br>
-membatalkan perubahan suatu file saat dalam staged
+checkout with create a new branch
 ```
-$ git revert <nama_file>
-```
-- #### git reset<br>
-membatalkan perubahan suatu file saat dalam staged
-```
-$ git reset <nama_file>
+$ git checkout -b <name_branch> <branch_to_create_new_one>
 ```
 
+- #### git reset<br>
+mereset commit
 ```
-$ git reset <nama_file>
+$ git reset <hash>
 ```
+- #### git revert<br>
+me-remove commit tertentu dengan membuat commit baru
+```
+$ git revert <hash>
+```
+- #### git branch<br>
+to see the list of branches
+```
+git branch
+```
+to create a new branch
+```
+git branch <name_branch>
+```
+move to a certain branch
+```
+git branch <name_branch>
+```
+to delete a branch
+```
+git branch -d <name_branch>
+```
+- #### git merge<br>
+to merge a branch
+```
+git merge <name_branch>
+```
+> note: recommend to be on branch main
 
 
 
