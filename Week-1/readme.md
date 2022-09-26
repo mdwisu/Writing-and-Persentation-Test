@@ -330,6 +330,18 @@ git clone <url HTTPS>
 </body>
 </html>
 ```
+## `Menjalankan HTML dengan Live Server`
+- buka extension menu di vscode
+- cari live server di pencariannya
+- setelah muncul, klik install
+- dan live server telah diinstall
+![Illustration to use for new users](img/live-server.jpg)
+- buka file html yang ingin ditampilkan
+- klik kanan pada tampilan html
+- klik open with live server atau tekan (alt+L alt+O)
+![Illustration to use for new users](img/open-live-server.jpg)
+
+
 
 
 
