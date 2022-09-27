@@ -172,6 +172,7 @@ jika anda sudah berada dalam folder yang diinginkan atau sudah anda dibuat
 $ git status
 ```
 maka akan muncul seperti gambar di bawah
+
 ![Illustration to use for new users](img/git-status.jpg)
 
 kondisi pada status
@@ -330,6 +331,8 @@ git clone <url HTTPS>
 </body>
 </html>
 ```
+HTML anatomy    
+![Illustration to use for new users](img/struktur-tag.jpg)
 ## `Menjalankan HTML dengan Live Server`
 - buka extension menu di vscode
 - cari live server di pencariannya
@@ -344,6 +347,10 @@ git clone <url HTTPS>
 ![Illustration to use for new users](img/run-live.jpg)
 
 ## `sintax didalam HTML`
+- HTML Comment
+```
+<!-- ini adalah sintax HTML comment -->
+```
 
 
 
