@@ -685,42 +685,42 @@ h2 {
   <div class="flex-item-right">2</div>
 </div>
 ```
+
 ```css
 * {
-        box-sizing: border-box;
-      }
+  box-sizing: border-box;
+}
 
-      .flex-container {
-        display: flex;
-        flex-direction: row;
-        font-size: 30px;
-        text-align: center;
-      }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
 
-      .flex-item-left {
-        background-color: #f1f1f1;
-        padding: 10px;
-        flex: 50%;
-      }
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
 
-      .flex-item-right {
-        background-color: dodgerblue;
-        padding: 10px;
-        flex: 50%;
-      }
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+}
 
-      /* Responsive layout - makes a one column-layout instead of two-column layout */
-      @media (max-width: 800px) {
-        .flex-container {
-          flex-direction: column;
-        }
-      }
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
 ```
 
 ![Illustration to use for new users](img/responsive.jpg)
 
 ![Illustration to use for new users](img/responsive2.jpg)
-
 
 ## `Flexbox`
 
@@ -762,3 +762,6 @@ Flexbox direkomendasikan karena penggunaannya yang mudah dan didukung oleh keban
 ```
 
 ![Illustration to use for new users](img/flex.jpg)
+![Illustration to use for new users](img/flex2.jpg)
+
+## 3. Algoritma

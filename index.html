@@ -6,43 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
+.container {
+    height: 600px;
+    width: 150px;    
+    border: 5px solid #333;
+    margin: 30px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; // jika kontennya melebihi batas akan kebawah*/ 
+    /* flex-flow: row-reverse wrap; // gabungan dari flex-direction & flex-wrap */
+    /* justify-content: space-evenly; */
+    /* align-items: flex-start; */
+}
 
-      .flex-container {
-        display: flex;
-        flex-direction: row;
-        font-size: 30px;
-        text-align: center;
-      }
+.container div {
+    background-color: rgb(26, 26, 118);
+    margin: 2px;
+    flex: 1;
+}
 
-      .flex-item-left {
-        background-color: #f1f1f1;
-        padding: 10px;
-        flex: 50%;
-      }
-
-      .flex-item-right {
-        background-color: dodgerblue;
-        padding: 10px;
-        flex: 50%;
-      }
-
-      /* Responsive layout - makes a one column-layout instead of two-column layout */
-      @media (max-width: 800px) {
-        .flex-container {
-          flex-direction: column;
-        }
-      }
     </style>
   </head>
   <body>
-    <h1>Responsive Flexbox</h1>
-
-    <div class="flex-container">
-      <div class="flex-item-left">1</div>
-      <div class="flex-item-right">2</div>
+    <div class="container">
+      <div class="satu">1</div>
+      <div class="dua">2</div>
+      <div class="tiga">3</div>
+      <div class="empat">4</div>
     </div>
   </body>
 </html>
