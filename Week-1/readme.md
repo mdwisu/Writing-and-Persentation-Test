@@ -228,7 +228,7 @@ $ git config --list
 
 Repository adalah direktori proyek yang kita buat
 
-- #### git init<br>adsf
+- #### git init<br>
 
 ```
 $ git init <nama_folder_repository>
@@ -475,7 +475,7 @@ HTML anatomy
 - lalu akan menampilkan tampilannya
   ![Illustration to use for new users](img/run-live.jpg)
 
-## `sintax didalam HTML`
+## `sintax popular didalam HTML`
 
 - HTML Comment
 
@@ -514,3 +514,251 @@ HTML anatomy
   <li>order list 6</li>
 </ol>
 ```
+
+- HTML Image
+
+```html
+<img src="Week-1/img/github.jpg" alt="" />
+```
+
+- HTML form (label and input)
+
+```html
+<label for="username">username</label> <input type="text" />
+```
+
+## `Semantic HTML`
+
+Semantic HTML sangat membantu untuk developer supaya lebih “Easy to read and understand”
+
+```
+- <article>
+- <aside>
+- <details>
+- <figcaption>
+- <figure>
+- <footer>
+- <header>
+- <main>
+- <mark>
+- <nav>
+- <section>
+- <summary>
+- <time>
+```
+
+## `deploy HTML`
+
+![Illustration to use for new users](img/netlify.jpg)
+
+- deployed website bisa di netlify
+
+## 3. CSS
+
+## `Pengenalan CSS`
+
+- CSS adalah bahasa yang digunakan untuk mendesain halaman website.
+
+- Dengan CSS, kita bisa mengubah warna, menggunakan font custom, editing text format, mengatur tata letak, dan lainnya.
+
+## `Struktur CSS dan comment`
+
+```css
+/* comment */
+body {
+  property: value;
+}
+```
+
+## `3 cara menggunakan CSS`
+
+- inline style
+
+```html
+<p style="color: red;font-size: 36px;">
+  ini paragraph menggunakan inline style
+</p>
+```
+
+- internal css
+
+diinput pada head html
+
+```html
+<style></style>
+```
+
+- external css
+  - membuat file dengan extension .css
+  - lalu import pada html
+
+```html
+<link rel="stylesheet" href="style.css" />
+```
+
+## `Selector CSS`
+
+- Tag Name / Global artinya akan mempengaruhi seluruh Tag Elemen HTML yang ada pada file tersebut
+  contoh
+  - body
+  - h1
+  - p
+  - img
+  - dan tag name lainnya
+- Class Name
+
+```html
+<h1 class="title uppercase">Dashboard</h1>
+```
+
+```css
+.title {
+  color: red;
+}
+.uppercase {
+  text-transform: uppsercase;
+}
+```
+
+![Illustration to use for new users](img/uppercase1.jpg)
+
+- ID Name
+
+```html
+<h1 id="title-dashboard">Dashboard</h1>
+```
+
+```css
+#title-dashboard {
+  color: red;
+}
+```
+
+![Illustration to use for new users](img/dashboard.jpg)
+
+- Important css
+
+```html
+<h1 id="red" class="red" style="color: red; text-transform: uppercase;">
+  Dashboard
+</h1>
+```
+
+```css
+h1 {
+  color: purple !important;
+}
+.red {
+  color: red;
+}
+#red {
+  color: red;
+}
+```
+
+![Illustration to use for new users](img/dashboard-purple.jpg)
+
+- Multiple selector
+
+```html
+<h1>ini H1</h1>
+
+<h2>ini H2</h2>
+```
+
+```css
+h1,
+h2 {
+  color: red;
+}
+```
+
+![Illustration to use for new users](img/multi.jpg)
+
+## `Responsive Web Design`
+
+```html
+<h1>Responsive Flexbox</h1>
+
+<div class="flex-container">
+  <div class="flex-item-left">1</div>
+  <div class="flex-item-right">2</div>
+</div>
+```
+```css
+* {
+        box-sizing: border-box;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .flex-item-left {
+        background-color: #f1f1f1;
+        padding: 10px;
+        flex: 50%;
+      }
+
+      .flex-item-right {
+        background-color: dodgerblue;
+        padding: 10px;
+        flex: 50%;
+      }
+
+      /* Responsive layout - makes a one column-layout instead of two-column layout */
+      @media (max-width: 800px) {
+        .flex-container {
+          flex-direction: column;
+        }
+      }
+```
+
+![Illustration to use for new users](img/responsive.jpg)
+
+![Illustration to use for new users](img/responsive2.jpg)
+
+
+## `Flexbox`
+
+- pengenalan flexbox
+
+Flexbox adalah cara untuk mengatur layout.
+
+Flexbox direkomendasikan karena penggunaannya yang mudah dan didukung oleh kebanyakan browser
+
+```html
+<div class="container">
+  <div class="satu">1</div>
+  <div class="dua">2</div>
+  <div class="tiga">3</div>
+  <div class="empat">4</div>
+</div>
+```
+
+```css
+.container {
+  width: 600px;
+  height: 150px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  /* flex-direction: row-reverse; */ // untuk arah flexnya
+  /* flex-wrap: wrap; */ // jika kontennya melebihi batas turun kebawah atau mengecil
+  /* justify-content: space-evenly; */ // model peletakan contentnya
+  /* align-items: flex-start; */ // aligentnyaa
+}
+
+.container div {
+  background-color: rgb(26, 26, 118);
+  margin: 2px;
+  flex: 1;
+}
+```
+
+![Illustration to use for new users](img/flex.jpg)
