@@ -340,6 +340,11 @@ git clone <url HTTPS>
 - klik kanan pada tampilan html
 - klik open with live server atau tekan (alt+L alt+O)
 ![Illustration to use for new users](img/open-live-server.jpg)
+- lalu akan menampilkan tampilannya 
+![Illustration to use for new users](img/run-live.jpg)
+
+## `sintax didalam HTML`
+
 
 
 
