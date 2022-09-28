@@ -765,3 +765,145 @@ Flexbox direkomendasikan karena penggunaannya yang mudah dan didukung oleh keban
 ![Illustration to use for new users](img/flex2.jpg)
 
 ## 3. Algoritma
+
+- perbedaan algoritma dan data structures
+  - algoritma merupakan urutan langkah logis tertentu untuk memecahkan suatu masalah deskripsi berupa step-step yang dibutuhkan untuk menyelesaikan suatu masalah,
+  - sedangkan struktur data menyediakan teknik untuk mengakses dan memanipulasi data secara efisien.
+- manfaat algorima dan data structures
+
+  - Programming itu adalah algoritma dan struktur data
+  - Data struktur digunakan untuk mengelola/manajemen sebuah data
+  - Membuat perintah dalam bahasa pemrograman dengan mudah.
+  - Memberikan informasi dengan cepat dan mudah, serta bisa dilakukan antar aplikasi.
+
+- contoh algoritma sederhana
+
+```
+Step 1 : Start
+Step 2 : mendeklarasikan variables angka1 , angka2 dan tambah.
+Step 3 : membaca nilai angka1 and angka2.
+Step 4 : panggil fungsi tambah dan menambahkan angka1 dan angka2 ke dalam fungsi tambah.
+         tambah = angka1 + angka2
+Step 5 : Display tambah
+Step 6 : Stop
+```
+
+- contoh algorima ke dalam javascript
+
+```js
+let angka1 = 1;
+let angka2 = 2;
+
+let tambah = (angka1, angka2) => {
+  tambah = angka1 + angka2;
+  console.log(tambah);
+};
+tambah(angka1, angka2);
+```
+
+![Illustration to use for new users](img/ciriciri.jpg)
+
+## 3. JavaScript
+
+Javascript adalah bahasa pemograman yang sangat powerful yang digunakan untuk logic pada sebuah website
+
+Peserta mampu memahami peran JavaScript pada web development
+
+## `Menjalankan JavaScript`
+
+Javascript dijalankan melalui browser pada device setiap user seperti
+
+- Google Chrome
+- Microsoft Edge
+- Modzilla Firefox
+- Safari
+
+## `Syntax dan Statement JavaScript`
+
+## `Tipe data pada javasctipt`
+
+- number
+  Tipe data number adalah tipe data yang mengandung semua angka termasuk angka desimal.
+
+- string
+  Tipe data string adalah grup karakter yang ada pada keyboard laptop/PC kita yaitu letters (huruf), number (angka), spaces (spasi), symbol, dan lainnya.
+
+- boolean
+  Tipe data boolean adalah tipe data yang hanya mempunyai 2 buah nilai.
+  2 buah nilai tersebut adalah TRUE (benar) or FALSE (salah).
+
+- null
+  Tipe data null adalah tipe data yang diartikan bahwa sebuah variable/data tidak memiliki nilai.
+
+- undefined
+  Tipe data undefined adalah tipe data yang merepresentasikan varibel/data yang tidak memiliki nilai.
+
+- object
+  Tipe data object adalah koleksi data yang saling berhubungan (related). Tipe data pbject dapat menyimpan data dengan tipe data apapun (number, string, boolean, dan lainnya)
+
+## `Variable pada javasctipt`
+
+variable adalah container/tempat untuk menyimpan sebuah nilai
+
+Ada 3 cara mendefinisikan sebuah variabel.
+
+```js
+var variable1
+// let dikenalkan pada versi javascript terbaru ES6
+// Variabel let mendukung kaidah global variabel dan local variabel
+// dianjurkan untuk menggunak let untuk variabel yang dinamis/dapat diubah.
+let variable2
+// Gunakan const jika variabel tidak dapat diubah nilainya
+const variable3
+```
+
+## `Operator pada javasctipt`
+
+Assignment Operator (=)
+Assignment operator digunakan untuk menyimpan sebuah nilai pada variabel
+
+- Mathematical Assignment Operator
+
+  - \+=
+  - \-=
+  - \*=
+  - \/=
+  - %=
+
+- Increment dan Decrement
+
+  Gunakan increment atau decrement untuk menambah atau mengurangi sebesar 1 nilai.
+  - i++
+  - i--
+
+- Arithmetic Operator
+  - Tambah (+)
+  - Kuramg (-)
+  - Perkalian (*)
+  - Pembagian (/)
+  - Modulus (%)
+
+- Comparison Operator
+  - Lebih kecil dari : <
+  - Lebih besar dari: >
+  - Lebih kecil atau sama dengan: <=
+  - Lebih besar atau sama dengan: >=
+  - Sama dengan: ===
+  - Tidak sama dengan: !==
+
+- Logical Operator
+  - AND operator : &&
+  - OR operator: ||
+  - NOT operator: !
+
+- looping
+```js
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars[i]);
+}
+```
+![Illustration to use for new users](img/asdf.jpg)
+
