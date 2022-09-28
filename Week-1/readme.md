@@ -23,10 +23,10 @@ CLI adalah program yang memungkinkan pengguna mengetik perintah teks yang memeri
 
 - Terminal Emulator, aplikasi untuk mengakses CLI
 - contoh CLI
-- Bash
-- PowerShell
-- sh
-- cmd.exe
+  - Bash
+  - PowerShell
+  - sh
+  - cmd.exe
 - Shell Prompt adalah Tempat kita memasukkan command
 
 ### file system
