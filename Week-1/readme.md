@@ -471,8 +471,11 @@ HTML anatomy
 - buka file html yang ingin ditampilkan
 - klik kanan pada tampilan html
 - klik open with live server atau tekan (alt+L alt+O)
+
   ![Illustration to use for new users](img/open-live-server.jpg)
+
 - lalu akan menampilkan tampilannya
+
   ![Illustration to use for new users](img/run-live.jpg)
 
 ## `sintax popular didalam HTML`
@@ -873,17 +876,20 @@ Assignment operator digunakan untuk menyimpan sebuah nilai pada variabel
 - Increment dan Decrement
 
   Gunakan increment atau decrement untuk menambah atau mengurangi sebesar 1 nilai.
+
   - i++
   - i--
 
 - Arithmetic Operator
+
   - Tambah (+)
   - Kuramg (-)
-  - Perkalian (*)
+  - Perkalian (\*)
   - Pembagian (/)
   - Modulus (%)
 
 - Comparison Operator
+
   - Lebih kecil dari : <
   - Lebih besar dari: >
   - Lebih kecil atau sama dengan: <=
@@ -892,18 +898,20 @@ Assignment operator digunakan untuk menyimpan sebuah nilai pada variabel
   - Tidak sama dengan: !==
 
 - Logical Operator
+
   - AND operator : &&
   - OR operator: ||
   - NOT operator: !
 
 - looping
-```js
-const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
 
-let text = "";
+```js
+const cars = ['BMW', 'Volvo', 'Saab', 'Ford', 'Fiat', 'Audi'];
+
+let text = '';
 for (let i = 0; i < cars.length; i++) {
   console.log(cars[i]);
 }
 ```
-![Illustration to use for new users](img/asdf.jpg)
 
+![Illustration to use for new users](img/asdf.jpg)
