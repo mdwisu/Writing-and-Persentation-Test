@@ -37,6 +37,25 @@
       <div class="empat">4</div>
     </div>
 
-    
+    <div><button id="decrement">-</button></div>
+    <span id="counter">0</span>
+    <button id="increment">+</button>
+
+
+    <script>
+      const btnd = document.getElementById("decrement")
+      const btni = document.getElementById("increment")
+      const counter = document.getElementById("counter")
+      
+      let angka = 0
+      btni.addEventListener("click", function () {
+        angka = angka+1
+        counter.innerText = angka
+      })
+      btnd.addEventListener("click", function () {
+        angka = angka-1
+        counter.innerText = angka
+      })
+    </script>
   </body>
 </html>
