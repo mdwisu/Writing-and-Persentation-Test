@@ -275,13 +275,15 @@ document.querySelector('#header p span');
 <!-- Jika ada element ini di file html -->
 <div id="header "></div>
 ```
+
 ```js
 // lalu kita gunakan kode JavaScript ini
 // untuk membuat sebuah element heading
-const heading = document.createElement("h1") 
-heading.textContent = "Ini Heading"
-document.getElementById ("header").appendChild(heading)
+const heading = document.createElement('h1');
+heading.textContent = 'Ini Heading';
+document.getElementById('header').appendChild(heading);
 ```
+
 ```html
 <!-- Hasilnya akan sama seperti jika kita menulis -->
 <div id="header ">
@@ -290,4 +292,23 @@ document.getElementById ("header").appendChild(heading)
 ```
 
 #### `DOM Event`
+
+#### Menangkap Interaksi User
+```js
+- Element.addEventListener(“event”)
+- Element.onevent
+```
+
+- Dengan cara Element.addEventListener(“event”)
+  - Bisa dihilangkan
+  - Bisa ada beberapa event listener yang sama untuk 1 element
+  - 
+  Memiliki argument tambahan { options }
+
+#### EventListener - Click
+```html
+<button id=”alert-button”>Say Hallo</button>
+```
+```js
+```
 
