@@ -22,7 +22,7 @@
 - Local scope berarti kita mendeklarasikan variabel didalam blocks seperti function, conditional, dan looping.
 - Maka variabel hanya bisa diakses didalam blocks saja. Tidak bisa diakses diluar blocks.
 
-## 1. Javascript Function
+## 2. Javascript Function
 
 Function adalah sebuah blok kode dalam sebuah grup untuk menyelesaikan 1 task/1 fitur.
 
@@ -110,7 +110,7 @@ const functionName = ( paramone , paramTwo ) = > { } ;
 
 - menghapus sedikit demi sedikit codingan anda untuk mengetahui letak dimana error tersebut berada
 
-## 2. JavaScript data types and data structures
+## 3. JavaScript data types and data structures
 
 ### Dynamic and weak typing
 
@@ -223,7 +223,7 @@ Math adalah Build-In Object yang memiliki properti dan metode untuk konstanta da
 - [Static Properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id#static_properties)
 - [Static Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id#static_methods)
 
-## 2. JavaScript dan HTML DOM
+## 4. JavaScript dan HTML DOM
 
 #### `Memanipulasi Element HTML`
 
