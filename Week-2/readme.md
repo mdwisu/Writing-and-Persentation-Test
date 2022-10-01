@@ -126,8 +126,168 @@ JavaScript juga merupakan bahasa yang diketik dengan lemah, yang berarti memungk
 
 ```js
 const foo = 42; // foo is a number
-const result = foo + "1"; // JavaScript memaksa foo ke string, sehingga dapat digabungkan dengan operan lainnya
+const result = foo + '1'; // JavaScript memaksa foo ke string, sehingga dapat digabungkan dengan operan lainnya
 console.log(result); // 421
 ```
 
 ### JavaScript types
+
+Himpunan tipe dalam bahasa JavaScript terdiri dari: Primitive Value dan objects
+
+#### Primitive Value
+
+- [Boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#boolean_type)
+- [Null type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#null_type)
+- [Undefined type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#null_type)
+- [Undefined type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#undefined_type)
+- [Number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#number_type)
+- [BigInt type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#bigint_type)
+- [String type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#string_type)
+- [Symbol type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#symbol_type)
+
+#### Objects
+
+Dalam ilmu komputer, objek adalah nilai dalam memori yang mungkin dirujuk oleh pengenal.
+
+- [properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#properties)
+  - [Data property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#data_property)
+  - [Accessor property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#Accessor_property)
+- ["Normal" objects, and functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#normal_objects_and_functions)
+- [Dates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#dates)
+- [Indexed collections: Arrays and typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#indexed_collections_arrays_and_typed_arrays)
+- [Keyed collections: Maps, Sets, WeakMaps, WeakSets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#keyed_collections_maps_sets_weakmaps_weaksets)
+
+### JavaScript types 2
+
+#### `String`
+
+#### Crating String
+
+```js
+const string1 = 'A string primitive';
+const string2 = 'Also a string primitive';
+const string3 = `Yet another string primitive`;
+const string4 = new String('A String object');
+```
+
+#### Character Access
+
+```js
+'cat'.charAt(1); // gives value "a"
+'cat'[1]; // gives value "a"
+```
+
+#### Comparing strings
+
+```js
+const a = 'a';
+const b = 'b';
+if (a < b) {
+  // true
+  console.log(`${a} is less than ${b}`);
+} else if (a > b) {
+  console.log(`${a} is greater than ${b}`);
+} else {
+  console.log(`${a} and ${b} are equal.`);
+}
+```
+
+```js
+function areEqualCaseInsensitive(str1, str2) {
+  return str1.toUpperCase() === str2.toUpperCase();
+}
+```
+
+#### `Number`
+
+Number adalah objek pembungkus primitif yang digunakan untuk mewakili dan memanipulasi angka seperti 37 atau -9,25. Konstruktor Number berisi konstanta dan metode untuk bekerja dengan angka. Nilai dari tipe lain dapat dikonversi ke angka menggunakan fungsi Number().
+
+```js
+123; // one-hundred twenty-three
+123.0; // same
+123 === 123.0; // true
+```
+
+```js
+Number('123'); // returns the number 123
+Number('123') === 123; // true
+
+Number('unicorn'); // NaN
+Number(undefined); // NaN
+```
+
+#### `Math`
+
+Math adalah Build-In Object yang memiliki properti dan metode untuk konstanta dan fungsi matematika. Ini bukan Function Object
+
+- [Static Properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id#static_properties)
+- [Static Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id#static_methods)
+
+## 2. JavaScript dan HTML DOM
+
+#### `Memanipulasi Element HTML`
+
+#### mencari element
+
+```html
+<body>
+  <div id="header">
+    <p>
+      <span> </span>
+    </p>
+  </div>
+  <div class="container"></div>
+  <div class="container"></div>
+</body>
+```
+
+```js
+// Mencari 1 element dengan id tertentu
+document.getElementById('header');
+// Mencari beberapa element sekaligus
+// dengan class tertentu
+document.getElementsByClassName('container');
+// Mencari element menggunakan
+// kombinasi selector ( seperti di CSS )
+document.querySelector('#header p span');
+```
+
+#### mengubah konten element
+
+```html
+<!-- Kombinasi dari html -->
+<h1 id="heading"></h1>
+
+<!-- dan dom js -->
+<script>
+  document.getElementById('heading').textContent = 'Teks Heading';
+</script>
+
+<!-- Sama hasilnya seperti menulis -->
+<h1 id="heading">Teks Heading</h1>
+```
+
+![Illustration to use for new users](img/textheading.jpg)
+
+#### membuat element HTML
+
+```html
+<!-- Jika ada element ini di file html -->
+<div id="header "></div>
+```
+```js
+// lalu kita gunakan kode JavaScript ini
+// untuk membuat sebuah element heading
+const heading = document.createElement("h1") 
+heading.textContent = "Ini Heading"
+document.getElementById ("header").appendChild(heading)
+```
+```html
+<!-- Hasilnya akan sama seperti jika kita menulis -->
+<div id="header ">
+  <h1>Ini Heading</h1>
+</div>
+```
+
+#### `DOM Event`
+
