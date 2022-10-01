@@ -294,6 +294,7 @@ document.getElementById('header').appendChild(heading);
 #### `DOM Event`
 
 #### Menangkap Interaksi User
+
 ```js
 - Element.addEventListener(“event”)
 - Element.onevent
@@ -302,13 +303,45 @@ document.getElementById('header').appendChild(heading);
 - Dengan cara Element.addEventListener(“event”)
   - Bisa dihilangkan
   - Bisa ada beberapa event listener yang sama untuk 1 element
-  - 
-  Memiliki argument tambahan { options }
+  - Memiliki argument tambahan { options }
 
 #### EventListener - Click
+
 ```html
-<button id=”alert-button”>Say Hallo</button>
-```
-```js
+<button id="”alert-button”">Say Hallo</button>
 ```
 
+```js
+const button = document.getElementById(“alert-button”)
+button.onclick = function() { alert('Hallo World') }
+```
+
+#### EventListener - Blur
+
+“Blur”, lawan dari “focus”, adalah event di mana sebuah element kehilangan fokus dari user (misal user klik mouse di luar element tersebut atau user klik tab untuk berpindah element)
+
+```js
+const input = document.getElementById(“username”)
+
+// tambahkan event listener
+input.addEventListener(“blur”, () => {
+	if(input.value.length < 6) alert(“Panjang username minimal 6”)
+})
+```
+
+#### EventListener - Form Submission
+
+Misalkan kita mempunyai element beberapa input dalam sebuah form <input name=”email /> dan <input type=”password” name=”password” />. Bagaimana caranya  kita mendapatkan isi dari kedua input tersebut saat submit form?
+
+```js
+const form = document.getElementById(“form”)
+
+form.addEventListener(“submit”, function(event) {
+	// cegah page refresh
+	event.preventDefault()
+
+	const formData = new FormData(form)
+	const values = Object.fromEntries(formData) // { email: ... }
+})
+
+```
