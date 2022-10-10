@@ -381,3 +381,182 @@ function pow(x, n) {
 }
 console.log(pow(2, 3)); // 8
 ```
+
+---
+
+### **JavaScript Asynhronous**
+
+---
+
+#### **Pengertian**
+Fungsi yang berjalan secara paralel dengan fungsi lain disebut asinkron.
+
+```javascript
+function myDisplayer(something) {
+  document.getElementById("demo").innerHTML = something;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+```
+Hasil :
+
+>**Catatan:**
+>Di dunia nyata, panggilan balik paling sering digunakan dengan fungsi asinkron.
+>Contoh tipikal adalah JavaScript ``setTimeout()``
+
+#### **Menunggu Waktu Habis**
+Saat menggunakan fungsi JavaScript setTimeout(), Anda dapat menentukan fungsi panggilan balik yang akan dijalankan pada waktu habis
+Conton:
+```javascript
+setTimeout(myFunction, 3000);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "I love You !!";
+}
+```
+>**Catatan:**
+>Pada contoh di atas, myFunctiondigunakan sebagai callback.
+>``myFunction`` diteruskan setTimeout()sebagai argumen.
+>3000 adalah jumlah milidetik sebelum time-out, jadi myFunction()akan dipanggil setelah 3 detik.
+>Saat Anda melewatkan fungsi sebagai argumen, ingatlah untuk tidak menggunakan tanda kurung.
+>Benar : ``setTimeout(myFunction, 3000);``
+>Salah : ``setTimeout(myFunction(), 3000);``
+
+#### **Menunggu Interval**
+Saat menggunakan fungsi JavaScript setInterval(), Anda dapat menentukan fungsi panggilan balik yang akan dijalankan untuk setiap interval:
+Contoh:
+```javascript
+setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  document.getElementById("demo").innerHTML=
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+}
+```
+
+### **Promise**
+#### **Pengertian**
+Contoh Sederhana:
+Bayangkan kamu seorang anak kecil. Mamamu berjanji kalau dia akan memberikan kamu sebuah smartphone terbaru minggu depan. 
+Kamu tidak tahu jika kamu akan mendapatkannya sampai minggu depan, apakah dia akan benar membelikannya atau tidak.
+Itulah sebuah promise. Sebuah promise mempunyai 3 kemungkinan. 
+- Pending : Kamu tidak tahu jika kamu akan mendapatkan hp
+- Fulfilled : Mama senang, dia membelikan hp terbaru
+- Rejected : Mama tidak senang, dia tidak membelikan kamu hp
+
+#### **Membuat sebuah Promise**
+```javascript
+// ES5: Part 1
+
+var isMomHappy = false;
+
+// Promise
+var willIGetNewPhone = new Promise(
+    function (resolve, reject) {
+        if (isMomHappy) {
+            var phone = {
+                brand: 'Samsung',
+                color: 'black'
+            };
+            resolve(phone); // fulfilled
+        } else {
+            var reason = new Error('mom is not happy');
+            reject(reason); // reject
+        }
+
+    }
+);
+```
+#### **Sintax sebuah Promise**
+```javascript
+new Promise(function (resolve, reject) { ... } );
+```
+
+#### **Consuming Promises**
+```javascript
+// ES5: Part 2
+
+var willIGetNewPhone = ... // continue from part 1
+
+// call our promise
+var askMom = function () {
+    willIGetNewPhone
+        .then(function (fulfilled) {
+            // yay, you got a new phone
+            console.log(fulfilled);
+             // output: { brand: 'Samsung', color: 'black' }
+        })
+        .catch(function (error) {
+            // oops, mom didn't buy it
+            console.log(error.message);
+             // output: 'mom is not happy'
+        });
+};
+
+askMom();
+```
+
+---
+
+### **WEB STORAGE**
+
+---
+
+#### **Pengertian**
+Ada beberapa cara untuk menyimpan data pengguna seperti pencarian, artikel berita, dan lain-lain ke lokal (browser) menggunakan web storage seperti cookies, local storage, dan session storage. Data ini dimanfaatkan oleh situs web tersebut untuk merekam kebiasaan pengguna agar dapat memberikan rekomendasi sesuai preferensi si pengguna tersebut.
+
+#### **Jenis-jenis Web Storage**
+##### **Cookies**
+- Cookies adalah data kecil yang dikirim dari situs web dan disimpan di komputer kita oleh web browser saat kita menjelajah.
+- Disebut data kecil karena maksimum data yang dapat disimpan dalam cookies adalah 4096 bytes (4 KB).
+- Biasanya data yang disimpan di cookies adalah access token pengguna saat login atau data pencarian saat melakukan pencarian pada situs web tertentu. Hal ini yang biasanya dilakukan oleh situs pencarian untuk melacak pencarian kita dan menampilkan iklan yang berhubungan dengan pencarian kita sebelumnnya.
+
+Kekurangan Cookies
+- Setiap kita mengakses situs web, cookies juga kembali dikirim sehingga memperlambat aplikasi web kamu dengan mengirimkan data yang sama.
+- Cookies disertakan pada setiap HTTP request, sehingga mengirimkan data yang tidak dienkripsi melalui internet, maka saat kita ingin menyimpan data dalam cookies kita harus mengenkripsinya terlebih dahulu.
+- Cookies hanya dapat menyimpan data sebanyak 4KB.
+- Lalu cookies juga memiliki tanggal kadaluarsa. Tanggal ini telah ditentukan sehingga web browser bisa menghapus cookies jika tanggal sudah kadaluarsa atau tidak dibutuhkan.
+
+##### **Local Storage**
+Ciri-ciri Local Storage:
+1. Menyimpan data tanpa tanggal kadaluarsa.
+2. Data tidak akan dihapus ketika web browser ditutup dan akan tersedia seterusnya selama kita tidak menghapus data local storage pada web browser.
+3. Dapat menyimpan data hingga 5MB.
+4. Hanya dapat menyimpan data string.
+
+Untuk menyimpan data pada local storage, kita menggunakan method setItem() yang membutuhkan 2 parameter. Parameter pertama adalah key yang ingin kita simpan dan parameter kedua adalah data (value) dari key yang akan disimpan.
+
+```javascript
+  localStorage.setItem('key', value);
+```
+
+##### **Session Storage Menyimpan Data**
+Ciri-ciri session storage:
+- Data yang disimpan pada session storage akan terus tersimpan selama browser terbuka dan tidak hilang jika laman di-reload.
+- Membuka banyak tab/window dengan URL yang sama, akan menciptakan session storage yang berbeda di masing-masing tab/window.
+- Menutup tab/window akan mengakhiri session dan menghapus data yang tersimpan di session storage pada tab/window tersebut.
+- Data yang tersimpan dalam session storage harus berbentuk string.
+- Hanya dapat menyimpan data sebanyak 5MB.
+
+```javascript
+// menambah session storage
+sessionStorage.setItem('key', value);
+```
+
+##### **Session Storage Mengambil Data**
+Setelah kita mempelajari cara menyimpan data di session storage, pada topik ini kita akan belajar bagaimana kita dapat mengambil dan mengolah data dari session storage.
+
+Sama seperti local storage, cara mendapatkan data dari session storage juga menggunakan getItem(), seperti berikut ini:
+
+```javascript
+// mendapatkan session storage
+sessionStorage.getItem('key');
+```
