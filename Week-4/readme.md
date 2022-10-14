@@ -167,6 +167,15 @@ const getDataAPIwithAsync = async () => {
 getDataAPIwtthAsync();
 ```
 
+## GitHub Lanjutan
+
+### Kolaborasi membuat organizations
+
+- masuk ke akun github anda
+- klik `setting` -> `organizations` -> `new organizations`
+- pick a plant yang diinginkan atau free
+- set up your organization
+
 ## Responsive Web Design
 
 - Responsive Web Design (RWD) adalah bertujuan membuat desain website kita dapat diakses dalam device apapun.
