@@ -1,4 +1,4 @@
-# <p style="text-align: center;">`Writing and Presentation Test Week 3 `</p>
+# <p style="text-align: center;">`Writing and Presentation Test Week 4 `</p>
 
 ---
 
@@ -171,7 +171,7 @@ getDataAPIwtthAsync();
 
 - Responsive Web Design (RWD) adalah bertujuan membuat desain website kita dapat diakses dalam device apapun.
 
-## Setting Up Chrome Dev Tools
+### Setting Up Chrome Dev Tools
 
 - Setiap developer website wajib menggunakan tools bawaan dari setiap browser, yang memudahkan proses development website.
 - pada browser chrome biasa disebut **chrome Dev Tools**
@@ -185,7 +185,7 @@ getDataAPIwtthAsync();
 
 ![Illustration to use for new users](img/resdev.jpg)
 
-## Add Viewport In HTML
+### Add Viewport In HTML
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=l.0" />
@@ -205,7 +205,7 @@ getDataAPIwtthAsync();
 </html>
 ```
 
-## Use max-width element
+### Use max-width element
 
 - ketika tidak menggunakan max-width element image akan menggunakan overflow ketika ditampilkan pada halaman yang lebih kecil dari image
 
@@ -221,7 +221,7 @@ getDataAPIwtthAsync();
 
 ![Illustration to use for new users](img/maxwidth2.jpg)
 
-## Media Query
+### Media Query
 
 - Media query untuk responsive web design umumnya hanya menggunakan 2 jenis media query.
 - Keduanya yaitu min-width dan max-width
