@@ -562,15 +562,13 @@ Mengambil satu nilai setelah melakukan perhitungan pada sekumpulan nilai
 
 ![Illustration to use for new users](img/join14.jpg)
 
-# Day 3: 2 November 2022
+## Authentication & Authorization in Express
 
-# Authentication & Authorization in Express
+### Authentication vs Authorization vs Encryption
 
-## Authentication vs Authorization vs Encryption
+#### Authentication
 
-### Authentication
-
-Authentication adalah suatu proses yang bertujuan untuk membuktikan identitas pengguna ketika ingin mengakses suatu sistem, mudahnya autentikasi akan memastikan bahwa itu benar-benar kamu atau bukan.
+- Authentication adalah suatu proses yang bertujuan untuk membuktikan identitas pengguna ketika ingin mengakses suatu sistem, mudahnya autentikasi akan memastikan bahwa itu benar-benar kamu atau bukan.
 
 Autentikasi dapat dilakukan melalui 3 faktor utama, yaitu :
 
@@ -578,11 +576,11 @@ Autentikasi dapat dilakukan melalui 3 faktor utama, yaitu :
 2. Possession, mengenai sesuatu yang kamu punya, misal kartu keamanan
 3. Inherence, mengenai sesuatu tentang anda, biasanya berupa data biomtrik seperti fingerprint
 
-Autentikasi yang hanya bergantung pada satu faktor disebut single-factor authentication, karena hanya bergantung pada satu faktor saja maka autentikasi tersebut menjadi semakin tidak aman.
+- Autentikasi yang hanya bergantung pada satu faktor disebut single-factor authentication, karena hanya bergantung pada satu faktor saja maka autentikasi tersebut menjadi semakin tidak aman.
 
 ### Authorization
 
-Otorisasi adalah proses verifikasi yang menentukan hal yang boleh kamu lakukan. Contoh beberapa fungsi otorisasi pada keamanan web adalah
+- Otorisasi adalah proses verifikasi yang menentukan hal yang boleh kamu lakukan. Contoh beberapa fungsi otorisasi pada keamanan web adalah
 
 1. Mencegah pengguna memodifikasi akun satu sama lain
 2. Melindungi data dari penyerang
@@ -590,7 +588,7 @@ Otorisasi adalah proses verifikasi yang menentukan hal yang boleh kamu lakukan. 
 
 ### Encryption
 
-Enkripsi adalah proses mengubah data menjadi format yang tidak dapat dibaca, data tersebut hanya akan dapat dibaca apabila kamu mempunyai kunci yang benar untuk mengartikannya.
+- Enkripsi adalah proses mengubah data menjadi format yang tidak dapat dibaca, data tersebut hanya akan dapat dibaca apabila kamu mempunyai kunci yang benar untuk mengartikannya.
 
 Enkripsi sendiri terbagi menjadi 2 jenis:
 
@@ -603,21 +601,21 @@ Enkripsi sendiri terbagi menjadi 2 jenis:
 
 ### Session
 
-Sebuah penyimpanan data yang hanya bertahan ketika browser atau tab dibuka, apabila browser ditutup maka secara otomatis data yang disimpan di session storage akan hilang.
+- Sebuah penyimpanan data yang hanya bertahan ketika browser atau tab dibuka, apabila browser ditutup maka secara otomatis data yang disimpan di session storage akan hilang.
 
 ### Cookie
 
-Sama seperti session, bedanya data pada cookie masih bisa digunakan setelah browser atau tab ditutup sesaui dengan waktu yang sudah diatur sebelumnya. Waktu bisa di set 1 jam hingga 1 hari bahkan 1 minggu. Cookies sering menyimpan informasi sensitif, terutama ketika digunakan pada manajemen session. Untuk itu cookies perlu ditambahkan tanggal kadaluarsa atau durasi sehingga cookie tidak bertahan lebih lama dari yang dibutuhkan. Untuk menambahkan durasi atau tanggal kadaluarsa dapat menggunakan [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) di Http response
+- Sama seperti session, bedanya data pada cookie masih bisa digunakan setelah browser atau tab ditutup sesaui dengan waktu yang sudah diatur sebelumnya. Waktu bisa di set 1 jam hingga 1 hari bahkan 1 minggu. Cookies sering menyimpan informasi sensitif, terutama ketika digunakan pada manajemen session. Untuk itu cookies perlu ditambahkan tanggal kadaluarsa atau durasi sehingga cookie tidak bertahan lebih lama dari yang dibutuhkan. Untuk menambahkan durasi atau tanggal kadaluarsa dapat menggunakan [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) di Http response
 
 ```javascript
 Set-Cookie: Key=Value; expires=Monday, 29-Nov-2021 07:30:10 GMT; HTTPOnly
 ```
 
-atribut HttpOnly pada Set-Cookie di atas memastikan bahwa data tidak dapat diakses oleh script ketika menjalankan client-side. Hal ini dapat membantu mencegah dari serangan Cross-Site Scripting (XSS) attack yang mencoba untuk mencuri session cooie dan mengambil alih session korban
+- atribut HttpOnly pada Set-Cookie di atas memastikan bahwa data tidak dapat diakses oleh script ketika menjalankan client-side. Hal ini dapat membantu mencegah dari serangan Cross-Site Scripting (XSS) attack yang mencoba untuk mencuri session cooie dan mengambil alih session korban
 
 ### Local Storage
 
-Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data meskipun browser telah ditutup. Data yang ada pada local storage dapat dihapus dengan menjalankan perintah hapus atau clear data pada browser.
+- Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data meskipun browser telah ditutup. Data yang ada pada local storage dapat dihapus dengan menjalankan perintah hapus atau clear data pada browser.
 
 <img src="https://miro.medium.com/max/1100/1*HC1PWdue5ZofBEwOMEsBBA.png" weidth="600" height="250">
 
@@ -658,9 +656,9 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
    ```
 3. Import semua library node.js
    ```javascript
-   const express = require("express");
-   const cookieParser = require("cookie-parser");
-   const sessions = require("express-session");
+   const express = require('express');
+   const cookieParser = require('cookie-parser');
+   const sessions = require('express-session');
    ```
 4. inisialisasi express app
    ```javascript
@@ -676,7 +674,7 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
    //session middleware
    app.use(
      sessions({
-       secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+       secret: 'thisismysecrctekeyfhrgfgrfrty84fwir767',
        saveUninitialized: true,
        cookie: { maxAge: oneDay },
        resave: false,
@@ -712,8 +710,8 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
 
    ```js
    //username and password
-   const myusername = "user1"; //hanyacontoh
-   const mypassword = "mypassword"; //hanyacontoh
+   const myusername = 'user1'; //hanyacontoh
+   const mypassword = 'mypassword'; //hanyacontoh
 
    // a variable to save a session
    var session;
@@ -724,11 +722,11 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
    - http://localhost:4000/
 
    ```js
-   app.get("/", (req, res) => {
+   app.get('/', (req, res) => {
      session = req.session;
      if (session.userid) {
        res.send("Welcome User <a href='/logout'>click to logout</a>");
-     } else res.sendFile("views/index.html", { root: __dirname });
+     } else res.sendFile('views/index.html', { root: __dirname });
    });
    ```
 
@@ -737,14 +735,14 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
    - http://localhost:4000/user
 
    ```js
-   app.post("/user", (req, res) => {
+   app.post('/user', (req, res) => {
      if (req.body.username == myusername && req.body.password == mypassword) {
        session = req.session;
        session.userid = req.body.username;
        console.log(req.session);
        res.send(`Hey there, welcome <a href=\'/logout'>click to logout</a>`);
      } else {
-       res.send("Invalid username or password");
+       res.send('Invalid username or password');
      }
    });
    ```
@@ -762,9 +760,9 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
    - http://localhost:4000/logout
 
    ```js
-   app.get("/logout", (req, res) => {
+   app.get('/logout', (req, res) => {
      req.session.destroy();
-     res.redirect("/");
+     res.redirect('/');
    });
    ```
 
@@ -789,21 +787,21 @@ Install `npm install jsonwebtoken` pada terminal sebelum menggunakan jwt
 
 ```js
 //memanggil jwt dari dependency
-const { appendFile } = require("fs");
-const jwt = require("jsonwebtoken");
+const { appendFile } = require('fs');
+const jwt = require('jsonwebtoken');
 
 //sign asynchronously, nilai privateKey bebas
 jwt.sign(
-  { foo: "bar" },
-  "privateKey",
-  { algortihm: "RS222" },
+  { foo: 'bar' },
+  'privateKey',
+  { algortihm: 'RS222' },
   function (err, token) {
     console.log(token);
   }
 );
 
 //contoh penerapan pada express
-jwt.sign({ example }, "secret", { expiresIn: "10h" }, (error, token) => {
+jwt.sign({ example }, 'secret', { expiresIn: '10h' }, (error, token) => {
   if (error) {
     console.log(error);
   } else {
@@ -815,9 +813,9 @@ jwt.sign({ example }, "secret", { expiresIn: "10h" }, (error, token) => {
 
 //contoh verify token pada express
 const verifyToken = (req, res, next) => {
-  const bearerHeader = req.headers["authorization"];
-  if (typeof bearerHeader !== "undefined") {
-    const bearer = bearerHeader.split(" ");
+  const bearerHeader = req.headers['authorization'];
+  if (typeof bearerHeader !== 'undefined') {
+    const bearer = bearerHeader.split(' ');
     const bearerToken = bearer[1];
     req.token = bearerToken;
     next();
@@ -827,9 +825,9 @@ const verifyToken = (req, res, next) => {
 };
 
 //contoh penerapan pada express, pada routes tertentu hanya bisa diakses saat user melakukan login
-app.post("/users/posts", verifyToken, (req, res) => {
+app.post('/users/posts', verifyToken, (req, res) => {
   const newPost = req.body.post;
-  jwt.verify(req.token, "secret", (err, authData) => {
+  jwt.verify(req.token, 'secret', (err, authData) => {
     if (err) {
       res.sendStatus(403);
     } else {
@@ -890,6 +888,7 @@ Setelah proses inisialisasi selesai maka akan muncul 4 folder baru :
 4. seeders, berisi semua file seed
 
 ### Setting databse
+
 ```js
 const { Sequelize } = require('sequelize');
 
@@ -911,27 +910,34 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 ```
 
 ### [Generate Model](https://sequelize.org/docs/v6/other-topics/migrations/)
+
 ```js
 npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
 ```
+
 Command di atas akan membuat model file user di folder user dan membuat file migration dengan nama XXXXXXXXXXXXX-create-user.js di folder migration
 
 ### Running migrations
+
 ```js
 npx sequelize-cli db:migrate
 ```
+
 command di atas akan mengeksekusi step di bawah ini:
+
 1. `SequelizeMeta`, tabel ini digunakan ntuk merekam migration yang di run di database terbaru
-2. Mencari file migration yang belum di run dengan mengecek tabel `SequelizaMeta`, pada bagian ini akan merunning migration `XXXXXXXXXXXXX-create-user.js` 
+2. Mencari file migration yang belum di run dengan mengecek tabel `SequelizaMeta`, pada bagian ini akan merunning migration `XXXXXXXXXXXXX-create-user.js`
 3. Membuat tabel `Users` dengan semua kolom yang ditentukan di file migration
 
 ### Undo
+
 - `npx sequelize-cli db:migrate:undo` ,command tersebut digunakan untuk kembali ke migrasi yang paling terbaru.
 - `npx sequelize-cli db:migrate:undo:all`, digunakan untuk kembali ke tahap inisial dengan meng-undo semua migrasi
 - `npx sequelize-cli db:migrate:undo:all --to XXXXXXXXXXXXXX-create-posts.js`, kamu juga dapat kembali ke migrasi tertentu dengan menyelipkaan nama di opsi `--to`
 
 ### Membuat first seed
-Untuk mengatur data migrasi, kamu dapat menggunakan seeders. File seed adalah beberapa perubahan data yang dapat digunakan untuk mengisi tabel database dengan sebuah sampel, seed sendiri adalah data awal yang dapat digunakan untuk mengisi data di database untuk keperluan awal project menggunakan sequelize. 
+
+Untuk mengatur data migrasi, kamu dapat menggunakan seeders. File seed adalah beberapa perubahan data yang dapat digunakan untuk mengisi tabel database dengan sebuah sampel, seed sendiri adalah data awal yang dapat digunakan untuk mengisi data di database untuk keperluan awal project menggunakan sequelize.
 
 `npx sequelize-cli seed:generate --name demo-user`
 
@@ -942,23 +948,26 @@ di bawah ini adalah contoh cara menggunakan seed
 ```js
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Users', [{
-      firstName: 'John',
-      lastName: 'Doe',
-      email: 'example@example.com',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }]);
+    return queryInterface.bulkInsert('Users', [
+      {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'example@example.com',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    ]);
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('Users', null, {});
-  }
+  },
 };
 ```
 
 up digunakan untuk mengisi data di database, sedangkan down digunakan untuk menghapus semua data seed di database
 
 ### Running seed
+
 Untuk mengcommitted seed file, lakukan command di bawah ini
 
 `npx sequelize-cli db:seed:all`, command tersebut akan mengeksekusi file seed dan demo user akan di tambahkan ke dalam tabel `User`.
@@ -966,113 +975,125 @@ Untuk mengcommitted seed file, lakukan command di bawah ini
 Karena riwayat eksesusi seeder tidak disimpan seperti pada SequelizeMeta. maka jika kamu ingin mengubah ini, kamu dapat membacanya di Storage
 
 ### Undoing Seeds
-Seed dapat di undo jika seed menggunakan beberapa penyimpanan, terdapat 2 command yang tersedia untuk melakukan undo 
+
+Seed dapat di undo jika seed menggunakan beberapa penyimpanan, terdapat 2 command yang tersedia untuk melakukan undo
 
 - `npx sequelize-cli db:seed:undo`, digunakan unutk mengundo seed terbaru
 - `npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data`, digunakan untuk mengundo seed yang spesifik
 - `npx sequelize-cli db:seed:undo:all`, digunakan untuk meng-undo seluruh seeds
 
 ### Membuat CRUD dengan Express dan Sequelize
+
 Beberapa endpoint RESTFUL yang dapat digunakan untuk membuat CRUD :
+
 1. Get All Todos
-  ```js
-  const TodoModel = require('./models').Todo;
 
-  app.get('./todos',async function (req,res){
-    try{
-      const todos = await TodoModel.findAll();
-
-      res.status(200).json(todos);
-    }catch(error){
-      res.status(500).json({
-        message: error.message |'internal server error'|
-      });
-    }
-  })
-  ```
-2. Get Todo Detail By Id
-  ```js
-  const TodoModel = require('./models').Todo;
-
-  app.get('/todos/:todoId', async function(req,res){
-    try{
-      const {todoId} = req.params;
-      const todo = await TodoModel.findOne({id : Number(todoId)});
-
-      res.status(200).json(todo);
-    }catch(error){
-      res.status(500).json({
-        message: error.message || 'internal server error',
-      });
-    }
-  })
-  ```
-3. Create New Todo
-  ```js
-  const TodoModel = require('./models').Todo;
-
-  app.post('./todos', async function(req,res){
-    try{
-      const { title, description, startTime} = req.body;
-
-      const newTodoData = {
-        title: title,
-        description: description,
-        startTime: startTime,
-        status:'false',
-      };
-
-      const newTodo = await TodoModel.create(newTodoData);
-
-      res.status(201).json({
-        message : 'new todo created',
-        todo : newTodo,
-      });
-    }catch(error){
-      req.status(500).json({
-        message: error.message || 'internal server error',
-      });
-    }
-  });
-  ```
-4. Update Todo By Id
-  ```js
-  const TodoModel = require('./models').Todo;
-
-  app.patch('./todos/:todoId', async function(req,res){
-    try{
-      const {todoId} = req.params;
-      const {title, description, startTime, status} = req.body;
-
-      const updateTodoData = {
-        title : title,
-        description : description,
-        startTime: startTime,
-        status: status,
-      };
-
-      const updateTodo = await TodoModel.update(updateTodoData,{
-        where: {
-          id : todoID,
-        }
-      });
-      res.status(200).json({
-        message : 'update todo success',
-      });
-    }catch (error){
-      res.status(500).json({
-        message: error.message || 'internal server error',
-      });
-    }
-  })
-  ```
-5. Delete Todo
 ```js
 const TodoModel = require('./models').Todo;
 
-app.delete('./todos/:todoId', async function (req,res){
+app.get('./todos',async function (req,res){
   try{
-    const { todoId }= req.params;
+    const todos = await TodoModel.findAll();
+
+    res.status(200).json(todos);
+  }catch(error){
+    res.status(500).json({
+      message: error.message |'internal server error'|
+    });
+  }
+})
+```
+
+2. Get Todo Detail By Id
+
+```js
+const TodoModel = require('./models').Todo;
+
+app.get('/todos/:todoId', async function (req, res) {
+  try {
+    const { todoId } = req.params;
+    const todo = await TodoModel.findOne({ id: Number(todoId) });
+
+    res.status(200).json(todo);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message || 'internal server error',
+    });
+  }
+});
+```
+
+3. Create New Todo
+
+```js
+const TodoModel = require('./models').Todo;
+
+app.post('./todos', async function (req, res) {
+  try {
+    const { title, description, startTime } = req.body;
+
+    const newTodoData = {
+      title: title,
+      description: description,
+      startTime: startTime,
+      status: 'false',
+    };
+
+    const newTodo = await TodoModel.create(newTodoData);
+
+    res.status(201).json({
+      message: 'new todo created',
+      todo: newTodo,
+    });
+  } catch (error) {
+    req.status(500).json({
+      message: error.message || 'internal server error',
+    });
+  }
+});
+```
+
+4. Update Todo By Id
+
+```js
+const TodoModel = require('./models').Todo;
+
+app.patch('./todos/:todoId', async function (req, res) {
+  try {
+    const { todoId } = req.params;
+    const { title, description, startTime, status } = req.body;
+
+    const updateTodoData = {
+      title: title,
+      description: description,
+      startTime: startTime,
+      status: status,
+    };
+
+    const updateTodo = await TodoModel.update(updateTodoData, {
+      where: {
+        id: todoID,
+      },
+    });
+    res.status(200).json({
+      message: 'update todo success',
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message || 'internal server error',
+    });
+  }
+});
+```
+
+5. Delete Todo
+
+```js
+const TodoModel = require('./models').Todo;
+
+app.delete('./todos/:todoId', async function (req, res) {
+  try {
+    const { todoId } = req.params;
 
     await TodoModels.destroy({
       where: {
@@ -1083,7 +1104,7 @@ app.delete('./todos/:todoId', async function (req,res){
     res.status(200).json({
       message: 'delete todo succes',
     });
-  }catch(error){
+  } catch (error) {
     res.status(500).json({
       message: error.message || 'internal sever error',
     });
